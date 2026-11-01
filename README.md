@@ -31,3 +31,4 @@ The dataset is highly imbalanced across genres.
 Comedy and Action contain over 1,400 movies each, while Family contains only four movies.
 This sample size difference may affect genre-level comparisons.
 ![Genre count](genre_count.png)
+![Genre sample size](genre_sample_size.png)
