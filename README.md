@@ -30,5 +30,48 @@ Insight
 The dataset is highly imbalanced across genres.
 Comedy and Action contain over 1,400 movies each, while Family contains only four movies.
 This sample size difference may affect genre-level comparisons.
+# Family Genre Investigation
+Although the Family genre showed the highest average gross revenue, only four movies remained after data cleaning.
+
+## Family Movies Included
+Movie	Year
+Beauty and the Beast	2017
+E.T. the Extra-Terrestrial	1982
+Raise Your Voice	2004
+The Nutcracker	1993
+##Insight
+Further investigation revealed that the Family genre contained only four movies in the cleaned dataset.
+
+The average gross revenue was heavily influenced by blockbuster titles such as Beauty and the Beast and E.T. the Extra-Terrestrial.
+
+Therefore, the Family genre result should be interpreted with caution due to its very small sample size.
 ![Genre count](genre_count.png)
-![Genre sample size](genre_sample_size.png)
+
+### Genre Sample Size
+
+| Genre | Number of Movies |
+|--------|----------------:|
+| Comedy | 1496 |
+| Action | 1415 |
+| Drama | 863 |
+| Animation | 277 |
+| Family | 4 |
+
+### Family Movies Included
+
+| Movie | Year | Gross Revenue |
+|--------|------|--------------:|
+| Beauty and the Beast | 2017 | 1.26B USD |
+| E.T. the Extra-Terrestrial | 1982 | 793M USD |
+| Raise Your Voice | 2004 | 14.9M USD |
+| The Nutcracker | 1993 | 2.1M USD |
+
+# Code Used
+```family_movies = (
+    df.loc[
+        df['genre'] == 'Family',
+        ['name', 'year', 'gross']
+    ]
+)
+
+print(family_movies)```
